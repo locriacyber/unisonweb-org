@@ -10,7 +10,6 @@
   import 'prismjs'
   import 'prismjs/components/prism-unison'
   import 'prismjs/plugins/line-numbers/prism-line-numbers'
-  import mediumZoom from 'medium-zoom'
   import Vue from 'vue'
   import Codeblock from '~/components/Codeblock/Codeblock'
   import AsciiPlayer from '~/components/AsciiPlayer'
@@ -59,7 +58,6 @@
           })
       },
       refreshContent() {
-
         this.$nextTick(() => {
           this.processCodeblocks()
           this.processAsciiPlayers()
@@ -71,12 +69,6 @@
       Prism.hooks.add('before-highlightall', function(env) {
         env.selector += ", .un-codeblock code"
       })
-    },
-    mounted() {
-      if (process.isClient) {
-        this.refreshContent()
-        mediumZoom(this.$refs['content'].querySelectorAll('.g-image'))
-      }
     },
     updated() {
       this.refreshContent()

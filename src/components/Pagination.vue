@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import { Pager } from 'gridsome'
+  import Pager from './Pager.svelte'
 
   export default {
     props: {

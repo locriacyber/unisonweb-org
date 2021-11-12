@@ -1,6 +1,6 @@
-const find = require('lodash.find')
-const flatten = require('lodash.flatten')
-const has = require('lodash.has')
+const find = require('lodash').find
+const flatten = require('lodash').flatten
+const has = require('lodash').has
 
 const codeExtraOptions = {
   transform: node => ({
